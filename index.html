@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>The Krusty Krab</title>
+        <style>
+            html, body {
+                background-color: #faf8d9;
+                text-align: center;
+            }
+            #header-img {
+                width: 99.9%;
+                margin: auto;
+            }
+            h1 {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                color: firebrick;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            nav {
+                margin-bottom: -10px;
+            }
+            nav>h2 {
+                display: inline;
+                text-align: center;
+            }
+            .separator {
+                margin-top: 20px;
+                font-weight: bolder;
+                width: 85%;
+                border-block-end-style: groove;   
+            }
+            .menu_sep {
+                font-weight: lighter;
+                width: 70%;
+                margin-bottom: 18px;
+            }
+            section>h2 {
+                margin-top: 15px;
+            }
+            h3 {
+                margin-top: 5px;
+                margin-bottom: -10px;
+            }
+            .description {
+                font-size: small;
+            }
+            .price {
+                font-size: 15px;
+            }
+            .checkout {
+                text-align: left;
+            }
+            .order-section {
+                width: 90%;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            .additional {
+                font-size: small;
+            }
+            .submit {
+                margin-top: 5px;
+                text-align:center;
+            }
+            footer>p {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="header-img" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/02/The-Krusty-Krab.jpg">
+            <h1>~The Krusty Krab~</h1>
+            <nav>
+                <h2><a href="#menu">[Menu]</a></h2>
+                &nbsp;
+                <h2><a href="#order-form">[Order Form]</a></h2>
+            </nav>
+        </header>
+        <hr class="separator">
+        <main>
+            <section id="menu">
+                <h2>~~~ Menu ~~~</h2>
+                <article>
+                    <img
+                        width="180"
+                        src="https://cdn.staticneo.com/w/spongebob/KrabbyPatty.png"
+                    />
+                    <h3><b>"Krabby Patty"</b></h3>
+                    <p class="description">It is a meatless hamburger of sorts made from buns, undersea vegetables, mustard and ketchup, and a patty; it can also be ordered with cheese.</p>
+                    <p class="price">| <i>$1.25 - $3.25</i> |</p>
+                </article>
+                <hr class="menu_sep">
+                <article>
+                    <img
+                        width="180"
+                        src="https://external-preview.redd.it/BwN4PXwfUkwMZrEWWt2hTR0wARU6AorSLYh4-8ELUnc.jpg?auto=webp&s=03f91d651bae58713f7616764fd0d182e8affb00"
+                    />
+                    <h3><b>"Jelly Patty"</b></h3>
+                    <p class="description">It is a Krabby Patty with its regular condiments and toppings, but with the additional topping of jellyfish jelly. There is also a version with light blue jelly over the lettuce, dripping outside of the burger.</p>
+                    <p class="price">| <i>$2.75 - $4.25</i> |</p>
+                </article>
+                <hr class="menu_sep">
+                <article>
+                    <img
+                        width="180"
+                        src="https://external-preview.redd.it/low-poly-kelp-shake-v0-OcScQu7H2GVUjqxTS9APW_Xnll3JxybyNplYhGyu7TE.png?format=pjpg&auto=webp&s=47888a04be0ba588db0ecd78d89042593b2f62ba"
+                    />
+                    <h3><b>"Kelp Shake"</b></h3>
+                    <p class="description">The drink comes in a light green bottle with a chartreuse lid and straw, and on the bottle is a chartreuse label that reads the drink's name in red text.</p>
+                    <p class="price">| <i>$0.50 - $1.75</i> |</p>
+                </article>
+            </section>
+        <hr class="separator">
+            <section id="order-form">
+                <h2>~~~ Place Your Order ~~~</h2>
+                <form class="checkout" action="/checkout" method="get">
+                <div  class="order-section">
+                    <label for="krabby_qty">Krabby Patty: </label><input name="krabby_patty" id="krabby_qty" type="number" min="0">
+                    <span class="additional"><br>
+                        <label>
+                            <input type="checkbox" name="addon_item1" value="undersea_vegetable">Undersea Vegetable
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="addon_item1" value="mustard">Mustard
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="addon_item1" value="ketchup">Ketchup
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="addon_item1" value="cheese">Cheese
+                        </label>
+                    </span>
+                    <br>
+                    <label for="jelly_qty">Jelly Patty: </label><input name="jelly_patty" id="jelly_qty" type="number" min="0">
+                    <span class="additional"><br>
+                        <label>
+                            <input type="checkbox" name="addon_item2" value="jelly_overdose">Jelly Overdose
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="addon_item2" value="light_blue_jelly">Light Blue Jelly
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="addon_item2" value="lettuce">Lettuce
+                        </label>
+                    </span>
+                    <br>
+                    <label for="kelp_qty">Kelp Shake: </label><input name="kelp_shake" id="kelp_qty" type="number" min="0">
+                    <span class="additional"><br>
+                        <label>
+                            <input type="radio" name="drink_size" value="small">Small
+                        </label><br>
+                        <label>
+                           <input type="radio" name="drink_size" value="medium">Medium
+                        </label><br>
+                        <label>
+                            <input type="radio" name="drink_size" value="large">Large
+                        </label>
+                    </span>
+                    <br>
+                    <label for="requests">Special Requests (optional):</label><br>
+                    <textarea id="requests" name="special_requests" rows="3" cols="32"></textarea>
+                    <br>
+                    <div class="submit">
+                        <input type="submit" value="Go To Checkout">
+                    </div>
+                </div>
+                </form>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <p>Made with 💻 and ❄️ by <b>Wintry</b></p>
+        </footer>
+    </body>
+</html>
